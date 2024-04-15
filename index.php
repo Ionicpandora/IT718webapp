@@ -6,3 +6,4 @@ if(isset($_REQUEST['group'])){
 }else{
   include 'homepage.html';
 }
+?>
