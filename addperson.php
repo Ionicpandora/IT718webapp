@@ -2,7 +2,7 @@
 
 include 'connect.php';
 
-echo "<p> this works to</p>"
+echo "<p> this works to</p>";
 
 
 
