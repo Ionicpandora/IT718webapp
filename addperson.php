@@ -2,4 +2,9 @@
 
 include 'connect.php';
 
-?>
+
+
+
+
+include 'addpeople.html';
+exit();
