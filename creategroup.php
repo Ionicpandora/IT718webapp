@@ -3,7 +3,7 @@
 include "connect.php";
 
 // sql to create table
-$sql = "CREATE TABLE MyGuests (
+$sql = "CREATE TABLE '%{$group_name}%' (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(255) NOT NULL
 )";
