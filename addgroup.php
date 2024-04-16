@@ -9,7 +9,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 
 // Run the create table query
 if (mysqli_query($conn, "
-CREATE TABLE test (
+DROP TABLE test (
 `Id` INT NOT NULL AUTO_INCREMENT ,
 `person` VARCHAR(225),
 PRIMARY KEY (`Id`)
