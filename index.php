@@ -5,11 +5,10 @@ if(isset($_REQUEST['group'])){
   $name = htmlspecialchars($_REQUEST['person']);
   include 'addperson.php';
   exit();
-  
+
 }elseif(isset($_REQUEST['create'])){
-  echo "works";
   $group_name = htmlspecialchars($_REQUEST['groupname']);
-  include "creategroup.php";
+  include 'addgroup.php';
   exit();
 
 }else{
