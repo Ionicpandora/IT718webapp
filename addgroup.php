@@ -12,7 +12,6 @@ if (mysqli_query($conn, "
 CREATE TABLE test (
 `Id` INT NOT NULL AUTO_INCREMENT ,
 `person` VARCHAR(225),
-`Price` DOUBLE NOT NULL ,
 PRIMARY KEY (`Id`)
 );
 ")) {
