@@ -7,12 +7,9 @@ if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-//Create an Insert prepared statement and run it
-$group_name = "test";
-$person = 'austin';
-$price = 12.5;
-if ($stmt = mysqli_prepare($conn, "INSERT INTO ? (person) VALUES (?, ?)")) {
-mysqli_stmt_bind_param($stmt, 'ssd', $group_name, $person, $price);
+//Create an Insert prepared statement and run it;
+if ($stmt = mysqli_prepare($conn, "INSERT INTO {$group_to_add} (person) VALUES (?)")) {
+mysqli_stmt_bind_param($stmt, 'ssd', $name);
 mysqli_stmt_execute($stmt);
 printf("Insert: Affected %d rows\n", mysqli_stmt_affected_rows($stmt));
 mysqli_stmt_close($stmt);
