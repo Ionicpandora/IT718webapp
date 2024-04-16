@@ -11,6 +11,10 @@ if(isset($_REQUEST['group'])){
   include 'addgroup.php';
   exit();
 
+}elseif(isset($_REQUEST['getgroup'])){
+  $group = htmlspecialchars($_REQUEST['getgroup']);
+  include 'getallgroup.php';
+
 }else{
   include 'homepage.html';
   exit();
