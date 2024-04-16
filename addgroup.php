@@ -9,7 +9,11 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 
 // Run the create table query
 if (mysqli_query($conn, "
-DROP TABLE {$group_name};
+CREATE TABLE {$group_name} (
+`Id` INT NOT NULL AUTO_INCREMENT ,
+`person` VARCHAR(225),
+PRIMARY KEY (`Id`)
+);
 ")) {
 printf("Table created\n");
 }
