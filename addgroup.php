@@ -27,6 +27,7 @@ printf("Table created\n");
 //Close the connection
 mysqli_close($conn);
 } catch (\Throwable $th) {
+    echo $th;
     include 'error.html';
 }
 
