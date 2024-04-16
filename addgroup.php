@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$group_name = htmlspecialchars($_REQUEST['']);
+
 if ($stmt = mysqli_prepare($conn, "CREATE TABLE ? (
     `Id` INT NOT NULL AUTO_INCREMENT ,
     `person` VARCHAR(225),
