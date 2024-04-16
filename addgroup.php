@@ -7,14 +7,17 @@ if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-// Run the create table query
-if (mysqli_query($conn, "
-DROP TABLE test (
-`Id` INT NOT NULL AUTO_INCREMENT ,
-`person` VARCHAR(225),
-PRIMARY KEY (`Id`)
-);
-")) {
+$group_name = htmlspecialchars($_REQUEST['']);
+if ($stmt = mysqli_prepare($conn, "CREATE TABLE ? (
+    `Id` INT NOT NULL AUTO_INCREMENT ,
+    `person` VARCHAR(225),
+    PRIMARY KEY (`Id`)
+    );")) {
+mysqli_stmt_bind_param($stmt, 'ssd', $group_name);
+mysqli_stmt_execute($stmt);
+printf("Insert: Affected %d rows\n", mysqli_stmt_affected_rows($stmt));
+mysqli_stmt_close($stmt);
+} {
 printf("Table created\n");
 }
 
