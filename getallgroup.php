@@ -12,6 +12,8 @@ $results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
 ");
 $followingdata = $results->fetch_assoc();
+echo $followingdata[0];
+echo $followingdata[1];
 
 
 //Close the connection
