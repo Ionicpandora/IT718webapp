@@ -12,7 +12,6 @@ $results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
 ");
 $followingdata = $results->fetch_array(MYSQLI_ASSOC);
-echo $followingdata;
 
 
 //Close the connection
