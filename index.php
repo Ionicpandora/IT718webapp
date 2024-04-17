@@ -17,7 +17,8 @@ if(isset($_REQUEST['group'])){
   exit();
   
 }elseif(isset($_REQUEST['completeattendence'])){
-  print_r($_REQUEST);
+  $attended_users = $_REQUEST;
+  print_r($attended_users);
   //include 'saveattendence.php';
   include 'doattendence.html';
   exit();
