@@ -9,7 +9,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 
 
 $results = mysqli_query($conn, "
-SELECT 'person' FROM {$group_to_get};
+SELECT person FROM {$group_to_get};
 ");
 $followingdata = $results->fetch_assoc();
 
