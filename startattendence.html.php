@@ -7,9 +7,8 @@
 <body>
 <a href="homepage.html">Homepage</a>
 <h1>Start attendence</h1>
-<?php echo $results; ?>
 <form action="index.php" method="get">
-    <?php foreach($results as $result):?>
+    <?php foreach($followingdata as $result):?>
         <input required type="radio" id=<?php echo $result[0]; ?> name=<?php echo $result[0]; ?> value=<?php echo $result[0]; ?>>
         <label for=<?php echo $result[1]; ?>><?php echo $result[0]; ?></label><br>
     <?php endforeach; ?>
