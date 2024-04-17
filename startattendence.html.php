@@ -9,7 +9,7 @@
 <h1>Start attendence</h1>
 <form action="index.php" method="get">
     <?php $count = 0; foreach($results as $result):?>
-        <input required type="radio" id=<?php echo $count + 1; ?> name=<?php echo $result["person"]; ?> value=<?php echo $result["person"]; ?>>
+        <input type="radio" id=<?php echo $count + 1; ?> name=<?php echo $result["person"]; ?> value=<?php echo $result["person"]; ?>>
         <label for=<?php echo $count + 1; ?>><?php echo $result["person"]; ?></label><br>
     <?php endforeach; ?>
     <input type="hidden" name="completeattendence" id="completeattendence" required>
