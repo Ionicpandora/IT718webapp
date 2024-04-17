@@ -8,23 +8,13 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
 // Run the create table query
-/*if (mysqli_query($conn, "
+if (mysqli_query($conn, "
 CREATE TABLE {$group_name} (
 `Id` INT NOT NULL AUTO_INCREMENT ,
 `person` VARCHAR(225),
 PRIMARY KEY (`Id`)
 );
-"))*/
-
-if (mysqli_query($conn, '
-CREATE TABLE Products (
-`Id` INT NOT NULL AUTO_INCREMENT ,
-`ProductName` VARCHAR(200) NOT NULL ,
-`Color` VARCHAR(50) NOT NULL ,
-`Price` DOUBLE NOT NULL ,
-PRIMARY KEY (`Id`)
-);
-')){
+")){
 printf("Table created\n");
 }
 
