@@ -7,11 +7,11 @@ if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-// Run the create table query
+
 $results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
 ");
-$followingdata = $result->fetch_array(MYSQLI_ASSOC);
+$followingdata = $results->fetch_array(MYSQLI_ASSOC);
 echo $followingdata;
 
 
