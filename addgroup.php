@@ -12,7 +12,6 @@ if (mysqli_query($conn, "
 CREATE TABLE {$group_name} (
 `Id` INT NOT NULL AUTO_INCREMENT ,
 `person` VARCHAR(225),
-`checked_in` VARCHAR(255),
 PRIMARY KEY (`Id`)
 );
 ")) {
