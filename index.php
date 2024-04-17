@@ -17,8 +17,10 @@ if(isset($_REQUEST['group'])){
   exit();
   
 }elseif(isset($_REQUEST['completeattendence'])){
-  $attended_users = $_REQUEST;
-  include 'saveattendence.php';
+  $attended_users = apache_request_headers();
+  print_r($attended_users);
+  //include 'saveattendence.php';
+  include 'doattendence.html';
   exit();
 
 }elseif(isset($_REQUEST['viewgroup'])){
