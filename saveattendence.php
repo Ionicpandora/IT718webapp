@@ -21,5 +21,5 @@ mysqli_close($conn);
     include 'error.html';
 }
 
-include 'doattendence.html';
+include 'startattendence.html';
 exit();
