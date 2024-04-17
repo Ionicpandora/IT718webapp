@@ -11,7 +11,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 if ($results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
 ")) {
-printf("Table created\n");
+printf($results);
 }
 
 //Close the connection
