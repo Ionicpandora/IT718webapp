@@ -11,7 +11,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 $results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
 ");
-$followingdata = $result->fetch_assoc();
+$followingdata = $result->fetch_array(MYSQLI_ASSOC);
 echo $followingdata;
 
 
