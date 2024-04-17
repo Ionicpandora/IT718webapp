@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>viewing attendenc records of: <?php echo $viewgroup;?></h1>
+<h1>viewing attendence records of: <?php echo $viewgroup;?></h1>
 <table>
     <?php foreach($results as $result):?>
         <tr>
