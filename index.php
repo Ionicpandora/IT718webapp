@@ -18,7 +18,8 @@ if(isset($_REQUEST['group'])){
   
 }elseif(isset($_REQUEST['completeattendence'])){
   print_r($_REQUEST);
-  include 'saveattendence.php';
+  //include 'saveattendence.php';
+  include 'doattendence.html';
   exit();
 
 }elseif(isset($_REQUEST['viewgroup'])){
