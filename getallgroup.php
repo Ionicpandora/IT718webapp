@@ -8,11 +8,11 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
 // Run the create table query
-if ($results = mysqli_query($conn, "
+$results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
-")) {
+");
 echo $results;
-}
+
 
 //Close the connection
 mysqli_close($conn);
