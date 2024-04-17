@@ -9,7 +9,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 
 
 
-if ($stmt = mysqli_prepare($conn, "INSERT INTO {$group_to_add} (person) VALUES (?)")) {
+if ($stmt = mysqli_prepare($conn, "INSERT INTO {$group_to_add} (id, person) VALUES (1, ?)")) {
 mysqli_stmt_bind_param($stmt, 'ssd', $name);
 mysqli_stmt_execute($stmt);
 printf("Insert: Affected %d rows\n", mysqli_stmt_affected_rows($stmt));
