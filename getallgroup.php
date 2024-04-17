@@ -12,7 +12,6 @@ $results = mysqli_query($conn, "
 SELECT person FROM {$group_to_get};
 ");
 $followingdata = $results->fetch_assoc();
-print_r($followingdata);
 
 
 //Close the connection
