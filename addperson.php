@@ -8,7 +8,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
 if (mysqli_query($conn, "
-INSERT INTO {$group_name} (person) VALUES ({$name});
+INSERT INTO {$group_name} (person) VALUES ('{$name}');
 ")) {
 printf("Person added to table\n");
 }
