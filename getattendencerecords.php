@@ -12,7 +12,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 if ($results = mysqli_query($conn, "
 SELECT * FROM savedAttendence WHERE group={$viewgroup};
 ")) {
-printf("attendence saved\n");
+printf("attendence records gotten\n");
 }
 
 //Close the connection
