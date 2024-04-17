@@ -11,8 +11,11 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 $results = mysqli_query($conn, "
 SELECT person FROM {$group_to_get};
 ");
-$followingdata = $results->fetch_assoc();
+While($row = $results->fetch_assoc()){
+    $person = $row["col1"];
+}
 
+$results->free();
 
 //Close the connection
 mysqli_close($conn);
