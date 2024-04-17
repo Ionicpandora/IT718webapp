@@ -12,8 +12,17 @@ if(isset($_REQUEST['group'])){
   exit();
 
 }elseif(isset($_REQUEST['getgroup'])){
-  $group = htmlspecialchars($_REQUEST['getgroup']);
+  $group_to_get = htmlspecialchars($_REQUEST['getgroup']);
   include 'getallgroup.php';
+  exit();
+  
+}elseif(isset($_REQUEST['completeattendence'])){
+  include 'saveattendence.php';
+  exit();
+
+}elseif(isset($_REQUEST['viewgroup'])){
+  $viewgroup = htmlspecialchars($_REQUEST['viewgroup']);
+  include 'getattendencerecords.php';
 
 }else{
   include 'homepage.html';

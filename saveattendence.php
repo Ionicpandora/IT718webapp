@@ -6,12 +6,12 @@ mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtd
 if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$group_to_get = $group_to_get;
+
 // Run the create table query
 if ($results = mysqli_query($conn, "
 SELECT * FROM {$group_to_get};
 ")) {
-printf("Table created\n");
+printf("attendence saved\n");
 }
 
 //Close the connection
@@ -21,5 +21,5 @@ mysqli_close($conn);
     include 'error.html';
 }
 
-include 'startattendence.html.php';
+include 'doattendence.html';
 exit();
