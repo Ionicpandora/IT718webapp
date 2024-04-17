@@ -12,11 +12,12 @@ $results = mysqli_query($conn, "
 SELECT person FROM {$group_to_get};
 ");
 While($row = $results->fetch_assoc()){
-    $person = $row["col1"];
+    $person = $row[0];
 }
 
 $results->free();
 
+print_r($results);
 //Close the connection
 mysqli_close($conn);
 } catch (\Throwable $th) {
