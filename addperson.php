@@ -7,7 +7,7 @@ if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-if (mysqli_query($conn, "INSERT INTO {$group_to_add} ({$name}) VALUES (person)")){
+if (mysqli_query($conn, "INSERT INTO {$group_to_add} (person) VALUES ('{$name}')")){
   printf("Table row inserted\n");
   }
 /*if ($stmt = mysqli_prepare($conn, "INSERT INTO {$group_to_add} (person) VALUES (?)")) {
