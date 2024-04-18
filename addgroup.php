@@ -20,7 +20,9 @@ printf("Table created\n");
 
 /*if(mysqli_query($conn, "CREATE Table savedAttendence (
     `Id` INT NOT NULL AUTO_INCREMENT ,
+    `groupattended` VARCHAR(255),
     `person` VARCHAR(225),
+    `dateattended` DATE,
     `attendend` BIT,
     PRIMARY KEY (`Id`)
 )"))*/
