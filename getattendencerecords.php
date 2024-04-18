@@ -10,7 +10,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 echo $viewgroup;
 // Run the create table query
 if ($results = mysqli_query($conn, "
-SELECT * FROM savedAttendence WHERE;
+SELECT * FROM savedAttendence;
 ")) {
 printf("attendence records gotten\n");
 }
