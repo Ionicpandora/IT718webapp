@@ -20,7 +20,7 @@ die('Failed to connect to MySQL: '.mysqli_connect_error());
 $sqlcount = 0;
 while(count($array_of_names) > $sqlcount){
     $current_name = $array_of_names[$count];
-    if (mysqli_query($conn, "INSERT INTO savedAttendence (person, attended) VALUES ('{$current_name}', 1)")){
+    if (mysqli_query($conn, "INSERT INTO savedAttendence (person, attendend) VALUES ('{$current_name}', 1)")){
         printf("Table row inserted\n");
         }
 }
