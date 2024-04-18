@@ -10,7 +10,7 @@
 <form action="index.php" method="get">
     <?php $count = 0; foreach($results as $result):?>
         <input type="radio" id=<?php echo $count += 1; ?> name=<?php echo $count += 1; ?> value=<?php echo $result["person"]; ?>>
-        <label for=<?php echo $count + 1; ?>><?php echo $result["person"]; ?></label><br>
+        <label for=<?php echo $result["person"]; ?>><?php echo $result["person"]; ?></label><br>
     <?php endforeach; ?>
     <input type="hidden" name="completeattendence" id="completeattendence" required>
     <input type="submit" value="Submit">
