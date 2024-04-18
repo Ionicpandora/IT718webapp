@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php echo $results?>
 <h1>Viewing attendence records of <?php echo $viewgroup ?></h1>
 <a href="homepage.html">Homepage</a>
+<?php echo $results;?>
 <table>
 <?php foreach($results as $result):?>
-    <tr>
+     <tr>
         <td><?php echo $result["id"]?></td>
         <td><?php echo $result["groupattended"]?></td>
         <td><?php echo $result["person"]?></td>
