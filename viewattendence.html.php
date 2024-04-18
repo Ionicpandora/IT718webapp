@@ -8,7 +8,7 @@
 
 <h1>Viewing attendence records of <?php echo $viewgroup ?></h1>
 <table>
-<?php foreach($results as $result):?>
+<?php print_r($results); foreach($results as $result):?>
     <tr>
     <td><?php echo $result["id"]?></td>
     <td><?php echo $result["groupattended"]?></td>
