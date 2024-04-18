@@ -10,10 +10,7 @@
 
 <table>
 <?php foreach($results as $result):?>
-    <?php echo $result["IT718"];?>
      <tr>
-        <td><?php echo $result["id"]?></td>
-        <td><?php echo $result["groupattended"]?></td>
         <td><?php echo $result["person"]?></td>
         <td><?php echo $result["dateattended"]?></td>
         <td><?php echo $result["attendend"]?></td>
