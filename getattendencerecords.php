@@ -7,7 +7,7 @@ mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtd
 if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-
+echo $viewgroup;
 // Run the create table query
 if ($results = mysqli_query($conn, "
 SELECT * FROM savedAttendence WHERE groupattended='{$viewgroup}';
