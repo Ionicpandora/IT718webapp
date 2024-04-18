@@ -1,4 +1,14 @@
 <?php
+
+$count = 1;
+$arraycount = count($attended_users);
+$array_of_names = array(); 
+while($arraycount < $count){
+    array_push($array_of_names, $attended_users[$count]);
+    $count += 1;
+}
+
+print_r($array_of_names);
 try {
     $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
@@ -6,6 +16,7 @@ mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtd
 if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
+
 
 // Run the create table query
 if ($results = mysqli_query($conn, "
