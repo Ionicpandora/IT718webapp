@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<?php echo $results[0]?>
 <h1>Viewing attendence records of <?php echo $viewgroup ?></h1>
 <a href="homepage.html">Homepage</a>
 <table>
