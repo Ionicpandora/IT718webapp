@@ -23,6 +23,7 @@ while(count($array_of_names) > $sqlcount){
     if (mysqli_query($conn, "INSERT INTO savedAttendence (person, attendend) VALUES ('{$current_name}', 1)")){
         printf("Table row inserted\n");
         }
+        $count += 1;
 }
 // Run the create table query
 //Close the connection
