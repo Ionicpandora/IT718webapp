@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>startattendence</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a href="homepage.html">Homepage</a>
