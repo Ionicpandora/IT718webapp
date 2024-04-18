@@ -10,11 +10,11 @@
 <table>
 <?php foreach($results as $result):?>
     <tr>
-    <td><?php echo $result[0]?></td>
-    <td><?php echo $result[1]?></td>
-    <td><?php echo $result[2]?></td>
-    <td><?php echo $result[3]?></td>
-    <td><?php echo $result[4]?></td>
+    <td><?php echo $result["id"]?></td>
+    <td><?php echo $result["groupattended"]?></td>
+    <td><?php echo $result["person"]?></td>
+    <td><?php echo $result["dateattended"]?></td>
+    <td><?php echo $result["attendend"]?></td>
     </tr>
     <?php endforeach; ?>
 </table>
