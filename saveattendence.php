@@ -7,8 +7,6 @@ while($arraycount > $count){
     array_push($array_of_names, $attended_users[$count]);
     $count += 1;
 }
-
-print_r($array_of_names);
 try {
     $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
