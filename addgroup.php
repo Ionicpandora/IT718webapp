@@ -1,5 +1,5 @@
 <?php
-echo date();
+
 try {
     $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
@@ -19,14 +19,14 @@ PRIMARY KEY (`Id`)
 printf("Table created\n");
 }*/
 
-/*if(mysqli_query($conn, "CREATE Table savedAttendence (
+if(mysqli_query($conn, "CREATE Table savedAttendence (
     `Id` INT NOT NULL AUTO_INCREMENT ,
     `groupattended` VARCHAR(255),
     `person` VARCHAR(225),
     `dateattended` DATE,
     `attendend` BIT,
     PRIMARY KEY (`Id`)
-)"))*/
+)"))
 
 //Close the connection
 mysqli_close($conn);
