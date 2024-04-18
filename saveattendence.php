@@ -2,12 +2,8 @@
 
 $count = 1;
 $arraycount = count($attended_users);
-echo $arraycount;
-echo $attended_users[1];
-echo $attended_users[2];
-echo $attended_users[3];
 $array_of_names = array(); 
-while($arraycount < $count){
+while($arraycount > $count){
     array_push($array_of_names, $attended_users[$count]);
     $count += 1;
 }
