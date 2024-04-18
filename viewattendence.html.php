@@ -10,7 +10,7 @@
 
 <table>
 <?php foreach($results as $result):?>
-    <?php echo $result[0];?>
+    <?php echo $result["groupattended"];?>
      <tr>
         <td><?php echo $result["id"]?></td>
         <td><?php echo $result["groupattended"]?></td>
