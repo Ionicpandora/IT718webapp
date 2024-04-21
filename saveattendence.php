@@ -14,7 +14,7 @@ $sqlcount = 0;
 while(count($array_of_names) > $sqlcount){
     $current_name = $array_of_names[$sqlcount];
     if (mysqli_query($conn, "INSERT INTO savedAttendence (groupattended, person, dateattended, attendend) VALUES 
-    ('{$group_to_get}','{$current_name}', '2024-4-18', 1)")){
+    ('{$group_to_get}','{$current_name}', '2024-4-22', 1)")){
         printf("Table row inserted\n");
         }
         $sqlcount += 1;
