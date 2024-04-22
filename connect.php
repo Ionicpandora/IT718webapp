@@ -1,4 +1,6 @@
 <?php 
+require_once 'vendor/autoload.php';
+
 use Azure\Identity\DefaultAzureCredential;
 use Azure\Security\KeyVault\Secrets\SecretClient;
 
