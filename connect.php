@@ -4,7 +4,7 @@ require_once 'vendor/autoload.php';
 use Azure\Identity\DefaultAzureCredential;
 use Azure\Security\KeyVault\Secrets\SecretClient;
 
-$keyVaultUrl = "https://attendencetracker1-vault.vault.azure.net/secrets/Admin-Secrect/2bce63b9e0a2430990aeb79b506ef675";
+$keyVaultUrl = "https://attendencetracker1-vault.vault.azure.net/";
 $secretName = "Admin-Secret";
 
 $credential = new DefaultAzureCredential();
