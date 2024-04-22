@@ -9,7 +9,6 @@ if (mysqli_query($conn, "INSERT INTO {$group_to_add} (person) VALUES ('{$name}')
 //Close the connection
 mysqli_close($conn);
 } catch (\Throwable $th) {
-  print_r($secret);
   echo $th;
   include 'error.html';
 }
