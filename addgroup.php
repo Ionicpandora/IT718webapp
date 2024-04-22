@@ -1,7 +1,6 @@
 <?php
 
 try {
-    include 'connect.php';
 
 // Run the create table query
 if (mysqli_query($conn, "
