@@ -15,7 +15,7 @@ const secretName = "MySecretName";
 
 async function main() {
   const latestSecret = await client.getSecret(secretName);
-  return latestSecret;
+  return latestSecret.value;
 }
 
 main();
