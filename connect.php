@@ -1,27 +1,28 @@
 <?php 
 
 $secret ='<script type="text/JavaScript">  
-const { SecretClient } = require("@azure/keyvault-secrets");
 const { DefaultAzureCredential } = require("@azure/identity");
+const { SecretClient } = require("@azure/keyvault-secrets");
+
+const credential = new DefaultAzureCredential();
+
+const vaultName = "<YOUR KEYVAULT NAME>";
+const url = `https://${vaultName}.vault.azure.net`;
+
+const client = new SecretClient(url, credential);
+
+const secretName = "MySecretName";
 
 async function main() {
-  const credential = new DefaultAzureCredential();
-
-  const keyVaultName = "AttendenceTracker1-Vault";
-  const url = "https://" + keyVaultName + ".vault.azure.net";
-
-  const client = new SecretClient(url, credential);
-
-  const secretName = "Admin-Secrect"
-
-  const secret = await client.getSecret(secretName);
-  console.log("secret: ", secret);
-return secret;
+  const latestSecret = await client.getSecret(secretName);
+  return latestSecret;
 }
+
+main();
  </script>' 
 ; 
 
-$value = $secret["value"];
+$value = strval($secret["value"]);
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtdipzbu', '{$value}', 'group', 3306, MYSQLI_CLIENT_SSL);
