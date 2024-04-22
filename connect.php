@@ -1,4 +1,17 @@
 <?php 
+use Azure\Identity\DefaultAzureCredential;
+use Azure\Security\KeyVault\Secrets\SecretClient;
+
+$keyVaultUrl = "https://attendencetracker1-vault.vault.azure.net/secrets/Admin-Secrect/2bce63b9e0a2430990aeb79b506ef675";
+$secretName = "Admin-Secret";
+
+$credential = new DefaultAzureCredential();
+$client = new SecretClient($keyVaultUrl, $credential);
+
+$secret = $client->getSecret($secretName);
+$connString = $secret->getValue();
+
+echo $connString;
 
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
