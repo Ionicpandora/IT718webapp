@@ -6,13 +6,19 @@ const { SecretClient } = require("@azure/keyvault-secrets");
 
 const credential = new DefaultAzureCredential();
 
-const vaultName = "<YOUR KEYVAULT NAME>";
+const vaultName = "AttendenceTracker1-Vault";
 const url = `https://${vaultName}.vault.azure.net`;
 
 const client = new SecretClient(url, credential);
 
-const secretName = "MySecretName";
-const latestSecret = await client.getSecret(secretName);
+const secretName = "Admin-Secrect";
+
+async function main() {
+  const latestSecret = await client.getSecret(secretName);
+  return latestSecret;
+}
+
+main();
  </script>' 
 ; 
 $value = $secret.value;
