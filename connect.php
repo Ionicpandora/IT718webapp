@@ -19,8 +19,7 @@ async function main() {
 }
 
 main();
- </script>' 
-; 
+ </script>' ; 
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtdipzbu', '{$secret.value}', 'group', 3306, MYSQLI_CLIENT_SSL);
