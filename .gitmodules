@@ -1,3 +1,0 @@
-[submodule "asure-sdk-for-php"]
-	path = asure-sdk-for-php
-	url = https://github.com/Azure/azure-sdk-for-php.git
