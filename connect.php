@@ -1,28 +1,23 @@
 <?php 
 
-$secret ='<script type="text/JavaScript">  
-const { DefaultAzureCredential } = require("@azure/identity");
-const { SecretClient } = require("@azure/keyvault-secrets");
+require_once 'vendor/autoload.php';
 
-const credential = new DefaultAzureCredential();
+use Azure\Identity\DefaultAzureCredential;
+use Azure\Security\KeyVault\Secrets\SecretClient;
 
-const vaultName = "AttendenceTracker1-Vault";
-const url = `https://${vaultName}.vault.azure.net`;
+$keyVaultUrl = 'https://attendencetracker1-vault.vault.azure.net/';
+$secretName = 'Admin-Secrect';
 
-const client = new SecretClient(url, credential);
+$credential = new DefaultAzureCredential();
+$client = new SecretClient($keyVaultUrl, $credential);
 
-const secretName = "Admin-Secrect";
+$secret = $client->getSecret($secretName);
+$connString = $secret->getValue();
 
-async function main() {
-  const latestSecret = await client.getSecret(secretName);
-  return latestSecret.value;
-}
 
-main();
- </script>' ; 
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
-mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtdipzbu', '{$secret.value}', 'group', 3306, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, 'attendencetracker1.mysql.database.azure.com', 'qivtdipzbu', '{$connString}', 'group', 3306, MYSQLI_CLIENT_SSL);
 if (mysqli_connect_errno()) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
