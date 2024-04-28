@@ -10,7 +10,7 @@ const client = new SecretClient(url, credential);
 
 const secretName = "Admin-Secrect";
 
-export default async function main() {
+async function main() {
   const latestSecret = await client.getSecret(secretName);
   return latestSecret.value;
 }
