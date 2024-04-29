@@ -15,4 +15,4 @@ async function main() {
   return latestSecret.value;
 }
 
-main();
+await main();
