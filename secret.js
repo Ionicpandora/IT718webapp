@@ -12,7 +12,6 @@ const secretName = "Admin-Secrect";
 
 async function main() {
   const latestSecret = await client.getSecret(secretName);
-  console.log(`Latest version of the secret ${secretName}: `, latestSecret);
   return latestSecret.value;
 }
 
