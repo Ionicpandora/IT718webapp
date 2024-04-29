@@ -4,7 +4,7 @@ import { SecretClient } from "@azure/keyvault-secrets";
 const credential = new DefaultAzureCredential();
 
 const vaultName = "AttendenceTracker1-Vault";
-const url = `https://${vaultName}.vault.azure.net`;
+const url = `https://${vaultName}.vault.azure.net/secrets/Admin-Secrect/2bce63b9e0a2430990aeb79b506ef675`;
 
 const client = new SecretClient(url, credential);
 
