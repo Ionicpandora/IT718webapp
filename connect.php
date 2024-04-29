@@ -1,6 +1,7 @@
 <?php 
 
 $secret = '<script src="secret.js"></script>';
+$value = $secret['value'];
 
 
 $conn = mysqli_init();
