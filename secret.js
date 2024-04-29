@@ -12,7 +12,7 @@ const secretName = "Admin-Secrect";
 
 async function main() {
   const latestSecret = await client.getSecret(secretName);
-  return latestSecret;
+  return latestSecret.value;
 }
 
 await main();
